@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "https://zeshinn.github.io/chatroom-client/",
+        origin: "https://zeshinn.github.io",
         methods: ["GET", "POST"]
     }
 });
