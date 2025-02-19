@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "https://zeshinn.github.io/chatroom-client/",
+        origin: "*",
         methods: ["GET", "POST"]
     }
 });
@@ -26,7 +26,7 @@ io.on("connection", (socket) => {
     });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT
 server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
